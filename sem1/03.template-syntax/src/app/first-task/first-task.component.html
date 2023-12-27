@@ -1,0 +1,14 @@
+<h1>Who are you?</h1>
+
+<input [(ngModel)]="name" type="text"
+       placeholder="Name"/>
+<br/>
+<input [(ngModel)]="familyName"
+       placeholder="Family name"/>
+
+<br/>
+<br/>
+<button (click)="welcome()" >Welcome</button>
+<button (click)="bye()">Bye</button>
+
+<p> {{ name }} </p>

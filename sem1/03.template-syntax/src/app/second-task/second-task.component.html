@@ -1,0 +1,20 @@
+<h1>People in the room</h1>
+
+<p>MAX number: {{ maxNumber }}</p>
+<p [style.color]="color">
+  Current number: {{ currentNumber }}
+</p>
+
+<label>
+  Add one
+  <button
+    (click)="addPerson()">+1</button>
+</label>
+<label>
+  Subtract one
+  <button [disabled]="currentNumber === 0"
+          (click)="subtract()">-1</button>
+</label>
+
+
+
