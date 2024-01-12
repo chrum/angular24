@@ -11,12 +11,19 @@
 ### 3. Template syntax
 [presentation](https://edu.chrum.it/ng-dev-24/lecture_3.html) | [pdf](https://edu.chrum.it/ng-dev-24/pdfs/Angular_developer.lecture_3.pdf)
 
+### 4. Components communication, pipes
+[presentation](https://edu.chrum.it/ng-dev-24/lecture_4.html) | [pdf](https://edu.chrum.it/ng-dev-24/pdfs/Angular_developer.lecture_4.pdf)
+
+
 ---
 
 ## **Exam questions**
 
 There will be [questions](https://github.com/sudheerj/angular-interview-questions) :smiling_imp:  
-
+But only from the group below :angel:
+```
+5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 21, 22, 24, 25, 26, 27, 28, 29, 30, 60, 62, 79
+```
 ## Project
 
 Emoji coded:  
@@ -79,6 +86,12 @@ Requirements:
 
 <img src="imgs/4_intro.png" width="45%"></img>
 <img src="imgs/4_game.png" width="45%"></img>
+
+<img src="imgs/5_intro.png" width="45%"></img>
+<img src="imgs/5_game.png" width="45%"></img>
+
+<img src="imgs/6_scores.png" width="45%"></img>
+<img src="imgs/6_game.png" width="45%"></img>
 
 
 ---
