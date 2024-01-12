@@ -1,0 +1,28 @@
+<h1>People in the room</h1>
+
+<p>MAX number: {{ maxNumber }}</p>
+<p [style.color]="color">
+  Current number: {{ peopleInTheRoom.length }}
+</p>
+
+<input [(ngModel)]="name" placeholder="Name" />
+<select [(ngModel)]="selectedFramework">
+  <option>Angular</option>
+  <option>React</option>
+  <option>Vue</option>
+</select>
+
+<button
+  [disabled]="!name || !selectedFramework"
+  (click)="addPerson()">Add</button>
+
+<button  (click)="clear()" >clear</button>
+
+<ol>
+  @for (person of peopleInTheRoom; track person) {
+    <li>
+      {{ person.name }} likes {{ person.framework }}
+      <button (click)=removePerson(person) >X</button>
+    </li>
+  }
+</ol>
