@@ -1,13 +1,9 @@
 <h1>Who are you?</h1>
 
-<input [(ngModel)]="name" type="text"
-       placeholder="Name"/>
-<br/>
-<input [(ngModel)]="familyName"
-       placeholder="Family name"/>
+<app-form (submit)="onFormSubmit($event)"></app-form>
 
 <br/>
 <br/>
 <h2>Actions</h2>
-<button (click)="welcome()" >Welcome</button>
-<button (click)="bye()">Bye</button>
+<button [disabled]="!fullname" (click)="welcome()" >Welcome</button>
+<button [disabled]="!fullname" (click)="bye()">Bye</button>

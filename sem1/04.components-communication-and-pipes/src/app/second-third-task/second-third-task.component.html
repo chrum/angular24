@@ -5,24 +5,10 @@
   Current number: {{ peopleInTheRoom.length }}
 </p>
 
-<input [(ngModel)]="name" placeholder="Name" />
-<select [(ngModel)]="selectedFramework">
-  <option>Angular</option>
-  <option>React</option>
-  <option>Vue</option>
-</select>
-
-<button
-  [disabled]="!name || !selectedFramework"
-  (click)="addPerson()">Add</button>
+<app-form (submit)="addPerson($event)"></app-form>
 
 <button  (click)="clear()" >clear</button>
 
-<ol>
-  @for (person of peopleInTheRoom; track person) {
-    <li>
-      {{ person.name }} likes {{ person.framework }}
-      <button (click)=removePerson(person) >X</button>
-    </li>
-  }
-</ol>
+<app-list
+  (remove)="removePerson($event)"
+  [data]="peopleInTheRoom"></app-list>

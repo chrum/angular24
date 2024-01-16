@@ -1,41 +1,32 @@
 import { Component } from '@angular/core';
 import {FormsModule} from "@angular/forms";
-
-interface Person {
-  name: string;
-  framework: string
-}
+import {ListComponent} from "./list/list.component";
+import {FormComponent} from "./form/form.component";
+import {Person} from "./models";
 
 @Component({
   selector: 'app-second-third-task',
   standalone: true,
   imports: [
     FormsModule,
+    FormComponent,
+    ListComponent
   ],
   templateUrl: './second-third-task.component.html',
   styleUrls: ['./second-third-task.component.scss']
 })
 export class SecondThirdTaskComponent {
-  maxNumber = 5;
+  public maxNumber = 5;
   public color = '';
-
-  public name = '';
-  public selectedFramework = '';
-
   public peopleInTheRoom: Array<Person> = [];
 
-  addPerson() {
+  addPerson(person: Person) {
     if (this.maxNumber === this.peopleInTheRoom.length) {
       alert('The room is full!');
       return;
     }
 
-    this.peopleInTheRoom.push({
-      name: this.name,
-      framework: this.selectedFramework
-    });
-    this.name = '';
-    this.selectedFramework = '';
+    this.peopleInTheRoom.push(person);
     this._updateColor();
   }
 

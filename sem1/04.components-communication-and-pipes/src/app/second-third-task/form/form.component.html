@@ -1,0 +1,10 @@
+<input [(ngModel)]="name" placeholder="Name" />
+<select [(ngModel)]="selectedFramework">
+  <option>Angular</option>
+  <option>React</option>
+  <option>Vue</option>
+</select>
+
+<button
+  [disabled]="!name || !selectedFramework"
+  (click)="addPerson()">Add</button>
