@@ -26,7 +26,11 @@ export class SecondThirdTaskComponent {
       return;
     }
 
-    this.peopleInTheRoom.push(person);
+    // this.peopleInTheRoom.push(person);
+    this.peopleInTheRoom = [
+      ...this.peopleInTheRoom,
+      person
+    ]
     this._updateColor();
   }
 

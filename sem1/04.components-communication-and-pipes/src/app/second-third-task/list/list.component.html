@@ -1,5 +1,12 @@
+<select [(ngModel)]="selectedFramework">
+  <option value="">All</option>
+  <option>Angular</option>
+  <option>React</option>
+  <option>Vue</option>
+</select>
+
 <ol>
-  @for (person of data; track person) {
+  @for (person of data | filter:selectedFramework; track person) {
     <li>
       {{ person.name }} likes {{ person.framework }}
       <button (click)=remove.emit(person)>X</button>
