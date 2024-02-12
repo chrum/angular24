@@ -1,0 +1,39 @@
+<h1>Subscription form</h1>
+<form #form="ngForm">
+    Name
+    <input name="name" #nameModel="ngModel"
+           required
+           minlength="3"
+           ngModel/>
+    <p *ngIf="nameModel.touched && nameModel.invalid">
+      at least 3 chars long
+    </p>
+    <br/>
+    Email
+    <input name="email"
+           required
+           pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$≥4"
+           type="email"
+           ngModel/>
+    <br/>
+    Translated
+    <input name="translated"
+           ngModel #translatedModel="ngModel"
+           type="checkbox"/>
+    @if (translatedModel.value) {
+      <select ngModel
+              required
+              name="language">
+        <option>Polski</option>
+        <option>English</option>
+        <option>Deutsch</option>
+      </select>
+    }
+    <br/>
+    <br/>
+
+    <button [disabled]="form.invalid"
+      (click)="submit(form.form.value)">
+      submit
+    </button>
+</form>

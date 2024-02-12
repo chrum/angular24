@@ -1,0 +1,7 @@
+input, select {
+  &.ng-touched {
+    &.ng-invalid {
+      border: 2px red solid;
+    }
+  }
+}
