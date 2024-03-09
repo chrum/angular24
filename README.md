@@ -40,7 +40,7 @@ Emoji coded:
 - :pray: Two pages (intro, game page) -  [details](https://edu.chrum.it/ng-dev-24/lecture_6.html#/0/7)
 - :rocket: Smart componentization - discussable, no pressure, [heres some inspiration](https://edu.chrum.it/ng-dev-24/lecture_6.html#/0/7)
 2. Services
-- :pray: storing and reading data - [details](https://edu.chrum.it/angular23/lecture_6.html#/0/8)
+- :pray: storing and reading data - [details](https://edu.chrum.it/ng-dev-24/lecture_6.html#/0/8)
 
 
 ### Gallery
