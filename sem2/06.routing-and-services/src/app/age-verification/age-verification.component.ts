@@ -1,6 +1,8 @@
-import {Component} from '@angular/core';
+import {Component } from '@angular/core';
 import {FormGroup, FormsModule, NgModel} from '@angular/forms';
 import {CommonModule} from '@angular/common';
+import {Router} from "@angular/router";
+import {UserInfoService} from "../user-info.service";
 
 @Component({
   selector: 'app-age-verification',
@@ -10,10 +12,14 @@ import {CommonModule} from '@angular/common';
   styleUrls: ['./age-verification.component.scss']
 })
 export class AgeVerificationComponent {
+
   public years: Array<number> = [];
   private _currentYear = new Date().getFullYear();
 
-  public constructor() {
+  public constructor(
+    private _router: Router,
+    private _userInfo: UserInfoService
+  ) {
     const minYear = this._currentYear - 100;
     for (let year = this._currentYear; year >= minYear; year--) {
       this.years.push(year);
@@ -37,6 +43,8 @@ export class AgeVerificationComponent {
     }
 
     alert('Success, access granted!');
+    this._userInfo.verifyAge();
+    this._router.navigate(['/shop']);
   }
 
 }
