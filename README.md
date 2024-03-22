@@ -44,7 +44,7 @@
 [presentation](https://edu.chrum.it/angular23/lecture_11.html) | [pdf](https://edu.chrum.it/angular23/pdfs/Angular_developer.lecture_11.pdf)
 | [validators example](https://stackblitz.com/edit/angular-reactive-forms-custom-validators)
 | [content projection example](https://stackblitz.com/edit/angular-content-projection-ex)
-}}$
+
 
 ---
 
