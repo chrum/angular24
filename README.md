@@ -72,7 +72,7 @@ Emoji coded:
     - :rocket: posting scores, my scores - [details](https://edu.chrum.it/ng-dev-24/lecture_7.html#/0/7)
 
 4. Routing params
-    - :pray: Add high contrast mode controlled by route param - [details](https://edu.chrum.it/ng-dev-24/angular23.html#/0/5)
+    - :pray: Add high contrast mode controlled by route param - [details](https://edu.chrum.it/angular23/lecture_9.html#/0/5)
     - :rocket::rocket: Guarding game route - [details](https://edu.chrum.it/angular23/lecture_9.html#/0/6)
 5. Reactive forms
     - :pray: Convert from on intro page to reactive forms [details](https://edu.chrum.it/angular23/lecture_10.html#/0/4)
