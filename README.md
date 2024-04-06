@@ -28,8 +28,8 @@
 | [http example](https://stackblitz.com/edit/angular-http-requests-example)
 
 
-### $\color{rgba(0,0,0, 0.4)}{\textsf{8. RxJS}}$
-[presentation](https://edu.chrum.it/angular23/lecture_8.html) | [pdf](https://edu.chrum.it/angular23/pdfs/Angular_developer.lecture_8.pdf)
+### 8. RxJS
+[presentation](https://edu.chrum.it/ng-dev-24/lecture_8.html) | [pdf](https://edu.chrum.it/ng-dev-24/pdfs/Angular_developer.lecture_8.pdf)
 | [example](https://stackblitz.com/edit/angular-rxjs-intro)
 
 ### $\color{rgba(0,0,0, 0.4)}{\textsf{9. Advanced Routing - params, nesting, guards}}$
@@ -72,8 +72,8 @@ Emoji coded:
     - :rocket: posting scores, my scores - [details](https://edu.chrum.it/ng-dev-24/lecture_7.html#/0/7)
 
 4. Routing params
-    - :pray: Add high contrast mode controlled by route param - [details](https://edu.chrum.it/angular23/lecture_9.html#/0/5)
-    - :rocket::rocket: Guarding game route - [details](https://edu.chrum.it/angular23/lecture_9.html#/0/6)
+    - :pray: Add high contrast mode controlled by route param - [details](https://edu.chrum.it/ng-dev-24/lecture_9.html#/0/5)
+    - :rocket::rocket: Guarding game route - [details](https://edu.chrum.it/ng-dev-24/lecture_9.html#/0/6)
 5. Reactive forms
     - :pray: Convert from on intro page to reactive forms [details](https://edu.chrum.it/ng2021/lecture_10.html#/0/4)
 
