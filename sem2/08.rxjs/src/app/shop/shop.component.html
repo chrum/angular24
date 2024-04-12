@@ -16,12 +16,12 @@
       </div>
     </nav>
 
-    @if (allCategories.length) {
+    @if (allCategories$ | async; as categories) {
       <div class="row">
         <div class="col-2">
           <app-category-selector
             (selected)="onCategorySelected($event)"
-            [categories]="allCategories"></app-category-selector>
+            [categories]="categories"></app-category-selector>
         </div>
         <div class="col">
           <app-products-list

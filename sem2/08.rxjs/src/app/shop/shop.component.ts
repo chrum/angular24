@@ -21,7 +21,9 @@ import {delay} from "rxjs";
   styleUrls: ['./shop.component.scss']
 })
 export class ShopComponent {
-  public allCategories: Array<Category> = [];
+  public allCategories$ = this._productsService.categoriesWithProducts$
+    .pipe(delay(1000));
+
   public productsToDisplay: Array<Product> = [];
   public productsInCart: Array<Product> = [];
 
@@ -38,13 +40,6 @@ export class ShopComponent {
     //
     // }
 
-    this._productsService.load()
-      .pipe(
-        delay(1000)
-      )
-      .subscribe((data) => {
-        this.allCategories = data;
-      })
 
     console.log('shop page');
 
