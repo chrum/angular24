@@ -35,6 +35,7 @@
 ### 9. Advanced Routing - params, nesting, guards
 [presentation](https://edu.chrum.it/ng-dev-24/lecture_9.html) | [pdf](https://edu.chrum.it/ng-dev-24/pdfs/Angular_developer.lecture_9.pdf)
 | [example](https://stackblitz.com/edit/advanced-routing)
+| [example 17+](https://stackblitz.com/edit/advanced-routing-17-plus)
 
 ### $\color{rgba(0,0,0, 0.4)}{\textsf{10. Reactive forms}}$
 [presentation](https://edu.chrum.it/angular23/lecture_10.html) | [pdf](https://edu.chrum.it/angular23/pdfs/Angular_developer.lecture_10.pdf)
