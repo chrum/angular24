@@ -3,10 +3,10 @@ import {Category, Product} from "../definitions";
 import {CommonModule} from '@angular/common';
 import {CategorySelectorComponent} from './category-selector/category-selector.component';
 import {ProductsListComponent} from './products-list/products-list.component';
-import {Router, RouterLink} from "@angular/router";
+import {ActivatedRoute, Router, RouterLink} from "@angular/router";
 import {UserInfoService} from "../user-info.service";
 import {ProductsService} from "../products.service";
-import {delay} from "rxjs";
+import {concatMap, debounceTime, delay, filter, forkJoin, map, take} from "rxjs";
 
 @Component({
   selector: 'app-shop',
@@ -30,24 +30,33 @@ export class ShopComponent {
   constructor(
     private _userInfo: UserInfoService,
     private _router: Router,
+    private _route: ActivatedRoute,
     private _productsService: ProductsService
   ) {
+    console.log(this._route.snapshot.params);
 
-    // if (this._userInfo.isOfAge === false) {
-    //
-    //   alert('Verify your age first!');
-    //   this._router.navigate(['/age-verification']);
-    //
-    // }
+    this._route.params
+      .pipe(
+        debounceTime(1000),
+        map(params => params['categoryId']),
+        filter(categoryId => categoryId),
+        concatMap((categoryId) => this.allCategories$.pipe(
+          map((categories) => categories.find((c) => c.id === +categoryId))
+        ))
+      )
+      .subscribe((selectedCategory) => {
 
+        if (selectedCategory) {
+          this.onCategorySelected(selectedCategory);
+        }
 
-    console.log('shop page');
-
+    })
   }
 
 
   public onCategorySelected(category: Category): void {
     this.productsToDisplay = category.products;
+    this._router.navigate(['/shop', category.id]);
   }
 
   public addToCart(product: Product): void {

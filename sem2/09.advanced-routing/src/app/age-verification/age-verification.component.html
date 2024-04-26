@@ -32,6 +32,13 @@
         </select>
         <p *ngIf="yearModel.touched && !yearModel.valid">This is required</p>
         <!-- <p>Year errors: {{ yearModel.errors | json }}</p> -->
+
+        <select ngModel name="selectedCategoryId" >
+          <option *ngFor="let category of availableCategories$ | async" [value]="category.id" >
+            {{ category.name }}
+          </option>
+        </select>
+
       </div>
     </div>
 
