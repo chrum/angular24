@@ -37,8 +37,8 @@
 | [example](https://stackblitz.com/edit/advanced-routing)
 | [example 17+](https://stackblitz.com/edit/advanced-routing-17-plus)
 
-### $\color{rgba(0,0,0, 0.4)}{\textsf{10. Reactive forms}}$
-[presentation](https://edu.chrum.it/angular23/lecture_10.html) | [pdf](https://edu.chrum.it/angular23/pdfs/Angular_developer.lecture_10.pdf)
+### 10. Reactive forms
+[presentation](https://edu.chrum.it/ng-dev-24/lecture_10.html) | [pdf](https://edu.chrum.it/ng-dev-24/pdfs/Angular_developer.lecture_10.pdf)
 | [example](https://stackblitz.com/edit/ng-dev-reactive-forms)
 
 ### $\color{rgba(0,0,0, 0.4)}{\textsf{11. Reactive forms: custom validators, Content Projection}}$
@@ -76,7 +76,7 @@ Emoji coded:
     - :pray: Add high contrast mode controlled by route param - [details](https://edu.chrum.it/ng-dev-24/lecture_9.html#/0/5)
     - :rocket::rocket: Guarding game route - [details](https://edu.chrum.it/ng-dev-24/lecture_9.html#/0/6)
 5. Reactive forms
-    - :pray: Convert from on intro page to reactive forms [details](https://edu.chrum.it/angular23/lecture_10.html#/0/4)
+    - :pray: Convert from on intro page to reactive forms [details](https://edu.chrum.it/ng-dev-24/lecture_10.html#/0/4)
 
 ### Gallery
 
