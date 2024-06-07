@@ -1,0 +1,44 @@
+<div class="card" style="width: 18rem;">
+  <form [formGroup]="ageForm" (submit)="verify()">
+    <div class="card-body">
+      <h5 class="card-text">Age verification</h5>
+      <div class="mb-3">
+        <label class="form-label">How old are you?</label>
+        <input [formControlName]="'age'"
+          type="number"
+          class="form-control"
+        />
+        <p *ngIf="age.touched && !age.valid">This is required (or you are too young)</p>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Year you were born</label>
+        <select
+          class="form-control"
+          formControlName="year"
+        >
+          <option *ngFor="let year of years" [value]="year">
+            {{ year }}
+          </option>
+        </select>
+        <p *ngIf="year.touched && !year.valid">This is required</p>
+        <!-- <p>Year errors: {{ yearModel.errors | json }}</p> -->
+
+        <select formControlName="selectedCategoryId" >
+          <option *ngFor="let category of availableCategories$ | async" [value]="category.id" >
+            {{ category.name }}
+          </option>
+        </select>
+
+      </div>
+    </div>
+
+    <div class="card-footer text-muted">
+      <button class="btn btn-primary" [disabled]="!ageForm.valid">
+        Verify
+      </button>
+
+      <!-- <p>Form value: {{ ageForm.value | json }}</p> -->
+    </div>
+  </form>
+</div>
