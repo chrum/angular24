@@ -10,7 +10,9 @@
 
         <div class="card float-end" style="width: 18rem;">
           <div class="card-body">
-            <h5 class="card-title">Cart ({{ productsInCart.length }})</h5>
+            <h5 [routerLink]="['/cart']" class="card-title">
+              Cart ({{ cartItemsCount$ | async }})
+            </h5>
           </div>
         </div>
       </div>

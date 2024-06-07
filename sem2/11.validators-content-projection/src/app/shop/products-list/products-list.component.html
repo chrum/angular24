@@ -13,20 +13,7 @@
 
   <div class="row pt-5">
     @for (product of products | sort:'price':sortDirection; track product.name) {
-      <div class="card m-1 text-center" style="width: 13rem;">
-        <img src="https://place-hold.it/300x200?fontsize=30&text={{ product.name | uppercase | slice:0:1 }}"
-             [alt]="product.name"
-             class="card-img-top"/>
-        <div class="card-body">
-          <h3 class="card-title">{{ product.name }}</h3>
-          <h5 class="card-title">{{ product.price | currency:'USD' }}</h5>
-        </div>
-        <div class="card-footer text-muted">
-          <button (click)="addToCart(product)">
-            Add to cart
-          </button>
-        </div>
-      </div>
+      <app-product [data]="product" (addToCart)="addToCart(product)" ></app-product>
     }
   </div>
 </div>

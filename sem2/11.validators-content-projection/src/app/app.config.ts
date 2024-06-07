@@ -4,6 +4,7 @@ import {AgeVerificationComponent} from "./age-verification/age-verification.comp
 import {ShopComponent} from "./shop/shop.component";
 import {provideHttpClient} from "@angular/common/http";
 import {ageVerificationGuard} from "./age-verification.guard";
+import {CartComponent} from './shop/cart/cart.component';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -12,12 +13,16 @@ export const appConfig: ApplicationConfig = {
       {
         path: 'shop',
         component: ShopComponent,
-        canActivate: [ageVerificationGuard]
+        // canActivate: [ageVerificationGuard]
       },
       {
         path: 'shop/:categoryId',
         component: ShopComponent,
-        canActivate: [ageVerificationGuard]
+        // canActivate: [ageVerificationGuard]
+      },
+      {
+        path: 'cart',
+        component: CartComponent,
       },
       { path: '**', redirectTo: 'age-verification' },
     ]),

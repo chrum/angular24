@@ -3,11 +3,12 @@ import { Product } from "../../definitions";
 import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {SortPipe} from '../../sort.pipe';
+import {ProductComponent} from '../product/product.component';
 
 @Component({
   selector: "app-products-list",
   standalone: true,
-  imports: [CommonModule, FormsModule, SortPipe],
+  imports: [CommonModule, FormsModule, SortPipe, ProductComponent],
   templateUrl: "./products-list.component.html",
   styleUrls: ["./products-list.component.scss"]
 })
