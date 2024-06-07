@@ -41,8 +41,8 @@
 [presentation](https://edu.chrum.it/ng-dev-24/lecture_10.html) | [pdf](https://edu.chrum.it/ng-dev-24/pdfs/Angular_developer.lecture_10.pdf)
 | [example](https://stackblitz.com/edit/ng-dev-reactive-forms)
 
-### $\color{rgba(0,0,0, 0.4)}{\textsf{11. Reactive forms: custom validators, Content Projection}}$
-[presentation](https://edu.chrum.it/angular23/lecture_11.html) | [pdf](https://edu.chrum.it/angular23/pdfs/Angular_developer.lecture_11.pdf)
+### 11. Reactive forms: custom validators, Content Projection
+[presentation](https://edu.chrum.it/ng-dev-24/lecture_11.html) | [pdf](https://edu.chrum.it/ng-dev-24/pdfs/Angular_developer.lecture_11.pdf)
 | [validators example](https://stackblitz.com/edit/angular-reactive-forms-custom-validators)
 | [content projection example](https://stackblitz.com/edit/angular-content-projection-ex)
 
