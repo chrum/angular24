@@ -11,9 +11,5 @@ import {Product} from '../../definitions';
 })
 export class ProductComponent {
   @Input() data!: Product;
-  @Output() addToCart = new EventEmitter();
-  constructor() {
-  }
-
 
 }

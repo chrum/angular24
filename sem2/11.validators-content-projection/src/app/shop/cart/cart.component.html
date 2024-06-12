@@ -19,6 +19,12 @@
         <ng-container *ngIf="products.length; else emptyCart">
           <app-product *ngFor="let product of cartItems$ | async"
                        [data]="product">
+
+              <button (click)="remove(product)">
+                Remove from cart
+              </button>
+
+
           </app-product>
         </ng-container>
 

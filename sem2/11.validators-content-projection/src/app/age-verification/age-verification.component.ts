@@ -1,7 +1,7 @@
 import {Component, inject} from '@angular/core';
 import {
   FormBuilder,
-  FormControl,
+  FormControl, FormGroup,
   FormsModule,
   ReactiveFormsModule,
   Validators
@@ -10,7 +10,8 @@ import {CommonModule} from '@angular/common';
 import {Router} from "@angular/router";
 import {UserInfoService} from "../user-info.service";
 import {ProductsService} from "../products.service";
-import {debounceTime} from "rxjs";
+import {debounceTime, map} from "rxjs";
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-age-verification',
@@ -30,6 +31,41 @@ export class AgeVerificationComponent {
     age: ['', [Validators.required, Validators.min(18)]],
     year: ['', [Validators.required]],
     selectedCategoryId: ['']
+  }, {
+    // validators: [
+    //   (fg: FormGroup) => {
+    //     const age = +fg.controls['age'].value;
+    //     const year = +fg.controls['year'].value;
+    //
+    //     const ageFromYear = this._currentYear - year;
+    //     if (ageFromYear !== age) {
+    //       return { ageYearNoMatch: true };
+    //       // return alert('Your age and year you were born do not match');
+    //     }
+    //
+    //     return null;
+    //   }
+    // ]
+    asyncValidators: [
+      (fg: FormGroup) => {
+            const age = +fg.controls['age'].value;
+            const year = +fg.controls['year'].value;
+
+            return this._http.get('https://chrum.it/verify-age.php', {
+              params: {
+                age, year
+              }
+            }).pipe(
+              map((ageYearGood) => {
+                if (ageYearGood) {
+                  return null;
+                }
+
+                return { ageYearNoMatch: true };
+              })
+            )
+      }
+    ]
   })
 
   public get age() {
@@ -37,13 +73,14 @@ export class AgeVerificationComponent {
   }
 
   public get year() {
-    return this.ageForm.controls.year;
+    return this.ageForm.controls['year'];
   }
 
   public constructor(
     private _router: Router,
     private _productsService: ProductsService,
-    private _userInfo: UserInfoService
+    private _userInfo: UserInfoService,
+    private _http: HttpClient
   ) {
 
     this.age.valueChanges
@@ -70,11 +107,6 @@ export class AgeVerificationComponent {
       return alert('You need to be over 18 to access this site');
     }
 
-    const year = +this.ageForm.value.year!;
-    const ageFromYear = this._currentYear - year;
-    if (ageFromYear !== age) {
-      return alert('Your age and year you were born do not match');
-    }
 
     alert('Success, access granted!');
     this._userInfo.verifyAge();

@@ -13,7 +13,15 @@
 
   <div class="row pt-5">
     @for (product of products | sort:'price':sortDirection; track product.name) {
-      <app-product [data]="product" (addToCart)="addToCart(product)" ></app-product>
+      <app-product [data]="product">
+
+        <button (click)="addToCart(product)">
+          Add to cart
+        </button>
+
+
+
+      </app-product>
     }
   </div>
 </div>
