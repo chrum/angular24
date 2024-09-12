@@ -80,19 +80,12 @@ Emoji coded:
 
 ### Gallery
 
-<img src="imgs/snake_gb.gif" width="45%"></img> 
-<img src="imgs/tetris_md.gif" width="45%"></img> 
-
-<img src="imgs/tetris_pixels.gif" width="45%"></img>
+<img src="imgs/snake_gb.gif" width="19%"></img>
+<img src="imgs/tetris_md.gif" width="38%"></img>
+<img src="imgs/tetris_pixels.gif" width="32%"></img>
 
 <img src="imgs/2_intro.png" width="45%"></img>
 <img src="imgs/2_game.png" width="45%"></img>
-
-<img src="imgs/3_intro.png" width="45%"></img>
-<img src="imgs/3_game.png" width="45%"></img>
-
-<img src="imgs/4_intro.png" width="45%"></img>
-<img src="imgs/4_game.png" width="45%"></img>
 
 <img src="imgs/5_intro.png" width="45%"></img>
 <img src="imgs/5_game.png" width="45%"></img>
