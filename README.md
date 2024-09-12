@@ -80,7 +80,7 @@ Emoji coded:
 
 ### Gallery
 
-<img src="imgs/snake_gb.gif" width="19%"></img>
+<img src="imgs/snake.gif" width="19%"></img>
 <img src="imgs/tetris_md.gif" width="38%"></img>
 <img src="imgs/tetris_pixels.gif" width="32%"></img>
 
