@@ -81,8 +81,9 @@ Emoji coded:
 ### Gallery
 
 <img src="imgs/snake.gif" width="19%"></img>
-<img src="imgs/tetris_md.gif" width="38%"></img>
 <img src="imgs/tetris_pixels.gif" width="32%"></img>
+<img src="imgs/tetris_md.gif" width="38%"></img>
+<img src="imgs/race.gif" width="38%"></img>
 
 <img src="imgs/2_intro.png" width="45%"></img>
 <img src="imgs/2_game.png" width="45%"></img>
